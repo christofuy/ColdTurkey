@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {ThemeProvider} from '@material-ui/core/styles'
 import CSSBaseline from '@material-ui/core/CssBaseline'
 import Dashboard from './pages/Dashboard/Dashboard'
+import './assets/scss/main.scss'
 
 import theme from './constants/theme'
 

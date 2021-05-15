@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+#root{
+	min-height:100vh;
+	min-width:100%;
+	display:flex;
+	flex-direction: column;
+}
+
+.flex{
+	display:flex;
+	&.flex-column{
+		flex-direction:column;
+	}
+	&.flex-wrap{
+		flex-wrap:wrap;
+	}
+	&.jc-center{
+		justify-content:center;
+	}
+	&.jc-sb{
+		justify-content: space-between;
+	}
+	&.jc-sa{
+		justify-content: space-around;
+	}
+	&.jc-fstart{
+		justify-content:flex-start;
+	}
+	&.ai-center{
+		align-items:center;
+	}
+	&.ai-fend{
+		align-items:flex-end;
+	}
+}
+
