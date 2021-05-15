@@ -1,8 +1,9 @@
+import RegisterForm from '../../parts/RegisterForm/RegisterForm'
+
 const Register = () => {
-	
 	return (
 		<>
-			<p>register page</p>
+			<RegisterForm />
 		</>
 	)
 }
