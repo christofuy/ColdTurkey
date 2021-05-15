@@ -16,7 +16,7 @@ function App() {
         </Switch>
       </Router>
     </ThemeProvider>
-  );
+  )
 }
 
 export default App;
