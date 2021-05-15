@@ -1,10 +1,11 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Dashboard from './pages/Dashboard/Dashboard'
 
 function App() {
   return (
     <Router>
       <Switch>
-        <h1>My App</h1>
+        <Route exact path='/dashboard' component={Dashboard} />
       </Switch>
     </Router>
   );
