@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import {Nav, NavLink} from '../../components/Nav/Nav'
+// import {Nav, NavLink} from '../../components/Nav/Nav'
 import Button from '../../components/Button/Button'
 import useAuth from '../../utils/useAuth'
 
@@ -30,28 +30,27 @@ const Header = () => {
 				
 			</div>
 			<div className = 'links'>
-				<Nav>
+				{/* <Nav>
 					<NavLink to='/register'>
 						<h1 className = 'link-text'>Register</h1>
 					</NavLink>
 					<NavLink to='/login'>
 						<h1 className = 'link-text'> Login</h1>
 					</NavLink>
-				</Nav>
-				{/* <Button
+				</Nav> */}
+				<Button
+					className = 'header-button'
 					variant='outlined'
 					color='secondary'
-					rounded
 					to={user ? '/dashboard' : '/register'}
 				>
 					{user ? 'Dashboard' : 'Register'}</Button>
-				<Button
+				<Button className = 'header-button'
 					variant='outlined'
 					color='secondary'
-					rounded
 					to={user ? '/dashboard' : '/login'}
 				>
-					{user ? 'Dashboard' : 'Login'}</Button> */}
+					{user ? 'Dashboard' : 'Log in'}</Button>
 			</div>
 			
 		</header>

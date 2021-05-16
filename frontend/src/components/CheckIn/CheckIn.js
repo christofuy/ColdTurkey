@@ -13,10 +13,11 @@ const CheckIn = () => {
   // TODO; logic for checking if done already
   // logic for incrementing days sober
   // logic for 
-  const {datesSober, setDatesSober, setDaysSober, year, month} = useCalendar()
+  const {datesSober, setDatesSober, daysSober,setDaysSober, year, month} = useCalendar()
 
   const handleSubmit = async () => {
     setDatesSober(datesSober.concat(new Date(year, month, new Date().getDate())))
+    setDaysSober(daysSober+1)
     const res = await fetch('http://localhost:5000/api/date', {
       method: 'POST',
       credentials: 'include',
