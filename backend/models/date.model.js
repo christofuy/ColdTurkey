@@ -2,9 +2,14 @@ const mongoose = require('mongoose');
 
 //model for dates where user completes their goal
 const dateSchema = mongoose.Schema({
-	date: { type: String, required: true },
+	date: { type: Date, required: true },
 });
 
-const Date = mongoose.model('Date', dateSchema);
+const dateListSchema = new mongoose.Schema({
+	uid: { type: String, required: true },
+	dates: [dateSchema],
+});
 
-module.exports = Date;
+const dateListSchema = mongoose.model('Date', dateListSchema, 'dateList');
+
+module.exports = DateList;
