@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import {loginValidation} from '../../validations/authValidation'
 import useAuth from '../../utils/useAuth'
 import './loginform.scss'
+import ColdTurkeyLogo from '../../assets/img/cold_turkey_logo.png'
 
 
 
@@ -20,8 +21,14 @@ const LoginForm = () => {
 
 	return (
 		<div className='login-form flex'>
+			
 			<div className='background-auth' />
+			
 			<AuthCard>
+			<img src={ColdTurkeyLogo}
+						alt='Cold Turkey Logo'
+						width='80'
+						height='80'/>	
 				<div className='form'>
 					<Formik
 						initialValues={initialValues}

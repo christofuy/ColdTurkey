@@ -5,7 +5,10 @@
 	.container{
 		height:80%;
 		.hero__text{
-			max-width:52ch;
+			max-width:50ch;
+			margin-left: 10em;
+			font-size: 16px;
+			text-align: center;
 			//h2{color:$primary-main;}
 		}
 		.hero__img div{

@@ -7,6 +7,7 @@ import {registerValidation} from '../../validations/authValidation'
 import useAuth from '../../utils/useAuth'
 import './registerform.scss'
 
+import ColdTurkeyLogo from '../../assets/img/cold_turkey_logo.png'
 
 
 const initialValues = {
@@ -23,6 +24,10 @@ const RegisterForm = () => {
 	return (
 		<div className='register-form flex'>
 			<AuthCard>
+			<img src={ColdTurkeyLogo}
+						alt='Cold Turkey Logo'
+						width='80'
+						height='80'/>	
 				<div className='form'>
 					<Formik
 						initialValues={initialValues}
