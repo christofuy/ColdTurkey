@@ -3,6 +3,12 @@ import {createMuiTheme} from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
   palette: {
+    primary: {
+      main: '#C2E1ED'
+    },
+    secondary:{
+      main:'#DCDCDC'
+    },
     text: {
       primary: '#444444',
       secondary: '#ADADAD'
@@ -34,6 +40,12 @@ const theme = createMuiTheme({
       fontSize: 'clamp(0.8rem,2vw,1rem)',
       lineHeight: 2
     },
+    		button: {
+			fontSize: 'clamp(0.8rem,2vw,1rem)',
+			fontWeight: 600,
+			lineHeight: 1,
+			textTransform: 'none'
+		}
   },
 })
 
