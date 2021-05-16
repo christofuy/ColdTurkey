@@ -9,10 +9,15 @@
 	}
 }
 
+.logo {
+    position: relative;
+    bottom: -1em;
+}
+
 .helpLinks{
 	margin-top:0.5em;
 	a{
-		font-size:12px;
+		font-size:16px;
 		&:hover{text-decoration:underline;}
 	}
 } 

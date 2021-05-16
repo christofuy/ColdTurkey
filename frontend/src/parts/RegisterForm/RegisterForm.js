@@ -24,7 +24,7 @@ const RegisterForm = () => {
 	return (
 		<div className='register-form flex'>
 			<AuthCard>
-			<img src={ColdTurkeyLogo}
+			<img className = 'logo' src={ColdTurkeyLogo}
 						alt='Cold Turkey Logo'
 						width='80'
 						height='80'/>	
@@ -80,7 +80,7 @@ const RegisterForm = () => {
 						}
 					</Formik>
 					<div className='helpLinks flex flex-column ai-center'>
-						<Link to='/login'>Already a Foodie Fridge member? Log in.</Link>
+						<Link to='/login'>Already a Cold Turkey member? Log in here</Link>
 						<Link to='/'>Back to Home</Link>
 					</div>
 				</div>

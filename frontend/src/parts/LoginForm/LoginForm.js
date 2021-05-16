@@ -25,7 +25,7 @@ const LoginForm = () => {
 			<div className='background-auth' />
 			
 			<AuthCard>
-			<img src={ColdTurkeyLogo}
+			<img className = 'logo' src={ColdTurkeyLogo}
 						alt='Cold Turkey Logo'
 						width='80'
 						height='80'/>	
@@ -67,7 +67,7 @@ const LoginForm = () => {
 						}
 					</Formik>
 					<div className='helpLinks flex flex-column ai-center'>
-						<Link to='/register'>Not a Foodie Fridge member yet? Register.</Link>
+						<Link to='/register'>Not a Cold Turkey member yet? Sign up here</Link>
 						<Link to='/'>Back to Home</Link>
 					</div>
 				</div>
