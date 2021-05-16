@@ -2,10 +2,21 @@
 
 .hero{
 	height:100%;
-	
-}
-
-
-@media (max-width:768px){
-	//TOOD: Make landing responsive
+	.container{
+		height:80%;
+		.hero__text{
+			max-width:52ch;
+			//h2{color:$primary-main;}
+		}
+		.hero__img div{
+			background: url('../../assets/img/HomeBG.jpeg') left/cover no-repeat;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+            opacity: 0.5;
+		}
+	}
 }
