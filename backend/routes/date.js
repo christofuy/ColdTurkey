@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
 let DateList = require('../models/date.model.js');
-let User = user.model.js;
 
-router.post('/', (req, res) => {
-	const { date } = req.body;
-
+router.post('/', async (req, res) => {
+	const { uid, date } = req.body;
+	console.log('hello');
 	const doc = await DateList.findOneAndUpdate(
 		{
-			uid: req.uid,
+			uid: uid,
 		},
 		{
 			$addToSet: {
@@ -19,7 +18,7 @@ router.post('/', (req, res) => {
 	);
 	if (!doc) {
 		const newDateList = new DateList({
-			uid: req.uid,
+			uid: uid,
 			dates: [{ date }],
 		});
 		newDateList.save();

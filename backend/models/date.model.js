@@ -10,6 +10,6 @@ const dateListSchema = new mongoose.Schema({
 	dates: [dateSchema],
 });
 
-const dateListSchema = mongoose.model('Date', dateListSchema, 'dateList');
+const DateList = mongoose.model('Date', dateListSchema, 'dateList');
 
 module.exports = DateList;
