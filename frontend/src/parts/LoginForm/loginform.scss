@@ -1,0 +1,18 @@
+.login-form{
+	// min-width:100%;
+    position: relative;
+	min-height:100vh;
+    // display:inli;
+	.background-auth{
+		background:url('../../assets/img/Login.jpg') center/cover no-repeat;
+		@media(min-width:601px){ width:100%; }
+	}
+}
+
+.helpLinks{
+	margin-top:0.5em;
+	a{
+		font-size:12px;
+		&:hover{text-decoration:underline;}
+	}
+} 

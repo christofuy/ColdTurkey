@@ -2,7 +2,7 @@
 
 .register-form{
 	// min-width:100%;
-	// min-height:100vh;
+	min-height:100vh;
     margin: auto;
     left: 50%;
     border-right: 50%;
@@ -12,7 +12,7 @@
     // overflow: hidden;
     // transform: translateX(-50%);
 	.background-auth{
-		background:url('../../assets/img/Register.jpeg') center/cover no-repeat;
+		background:url('../../assets/img/Register.jpg') center/cover no-repeat;
 		@media(min-width:601px){ width:100%; }
 	}
 }

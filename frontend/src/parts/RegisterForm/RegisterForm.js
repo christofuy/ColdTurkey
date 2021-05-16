@@ -1,7 +1,10 @@
 import {Formik, Form} from 'formik'
+import AuthCard from '../../components/AuthCard/AuthCard'
 import TextField from '../../components/Form/TextField'
 import Button from '../../components/Button/Button'
 import {Link} from 'react-router-dom'
+import {registerValidation} from '../../validations/authValidation'
+import useAuth from '../../utils/useAuth'
 import './registerform.scss'
 
 
@@ -13,12 +16,18 @@ const initialValues = {
 	password2: ''
 }
 
+
 const RegisterForm = () => {
+	const {register} = useAuth()
+
 	return (
-		<div className='register-form'>
+		<div className='register-form flex'>
+			<AuthCard>
 				<div className='form'>
 					<Formik
 						initialValues={initialValues}
+						validationSchema={registerValidation}
+						onSubmit={register}
 					>
 						{
 							({dirty, isSubmitting, isValid}) => (
@@ -66,10 +75,11 @@ const RegisterForm = () => {
 						}
 					</Formik>
 					<div className='helpLinks flex flex-column ai-center'>
-						<Link to='/login'>Already committed with Cold Turkey? Log in.</Link>
+						<Link to='/login'>Already a Foodie Fridge member? Log in.</Link>
 						<Link to='/'>Back to Home</Link>
 					</div>
 				</div>
+			</AuthCard>
 			<div className='background-auth' />
 		</div>
 	)
