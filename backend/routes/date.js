@@ -4,7 +4,6 @@ let DateList = require('../models/date.model.js');
 
 router.post('/', async (req, res) => {
 	const { uid, date } = req.body;
-	console.log('hello');
 	const doc = await DateList.findOneAndUpdate(
 		{
 			uid: uid,
