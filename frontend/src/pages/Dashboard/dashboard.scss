@@ -1,0 +1,13 @@
+
+
+
+.dashboard{
+  min-height:100vh;
+  background-color:#EDF2F4;
+  padding:3em 0;
+  &__main{
+    .dashboard__component+.dashboard__component{
+      margin-left:2em;
+    }
+  }
+}

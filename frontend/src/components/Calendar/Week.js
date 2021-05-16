@@ -1,5 +1,5 @@
 import CalendarDate from './Date'
-import {getDays} from '../../util/calendarFxns'
+import {getDays, compareDates} from '../../util/calendarFxns'
 import useCalendar from '../../hooks/useCalendar'
 
 
@@ -13,7 +13,7 @@ const Week = ({start, month}) => {
         <CalendarDate
           key={`day-${date.getDay()}`}
           active={date.getMonth() === month}
-        //marked={datesSober.contains()}
+          marked={compareDates(date, datesSober)}
         >
           {date.getDate()}
         </CalendarDate>
@@ -21,6 +21,5 @@ const Week = ({start, month}) => {
     </div>
   )
 }
-
 
 export default Week
