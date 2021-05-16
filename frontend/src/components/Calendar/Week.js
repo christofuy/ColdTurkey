@@ -1,34 +1,25 @@
 import CalendarDate from './Date'
+import {getDays} from '../../util/calendarFxns'
+import useCalendar from '../../hooks/useCalendar'
 
 
 const Week = ({start, month}) => {
-
-  const days = getDays(start, month)
+  const {datesSober} = useCalendar()
+  const days = getDays(start)
 
   return (
     <div className='calendar__week flex'>
-      {days.map(date => date)}
+      {days.map(date => (
+        <CalendarDate
+          key={`day-${date.getDay()}`}
+          active={date.getMonth() === month}
+        //marked={datesSober.contains()}
+        >
+          {date.getDate()}
+        </CalendarDate>
+      ))}
     </div>
   )
-}
-
-
-const getDays = (start, month) => {
-  const days = []
-
-  for (let i = 0; i < 7; ++i) {
-    const date = new Date(start)
-    date.setDate(start.getDate() + i)
-    const active = date.getMonth() === month
-    days.push(
-      <CalendarDate
-        key={`day-${i}`}
-        active={active}
-      >{date.getDate()}</CalendarDate>
-    )
-  }
-
-  return days
 }
 
 

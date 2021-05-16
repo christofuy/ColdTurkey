@@ -1,10 +1,13 @@
 import Typography from '../Typography/Typography'
 import Week from './Week'
+import useCalendar from '../../hooks/useCalendar'
+import {getWeeks} from '../../util/calendarFxns'
 import './calendar.scss'
 
 const day_labels = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
-const Calendar = ({month, year}) => {
+const Calendar = () => {
+  const {month, year} = useCalendar()
   const weeks = getWeeks(month, year)
 
   return (
@@ -18,32 +21,16 @@ const Calendar = ({month, year}) => {
         ))}
       </div>
       <div className='calendar__weeks'>
-        {weeks.map(week => week)}
+        {weeks.map(start => (
+          <Week
+            start={start}
+            month={month}
+            key={`week-${start.getDate()}`}
+          />
+        ))}
       </div>
     </div>
   )
-}
-
-
-const getWeeks = (month, year) => {
-  const weeks = []
-
-  const monthStart = new Date(year, month, 1)
-  const weekStart = new Date(monthStart)
-  weekStart.setDate(monthStart.getDate() - monthStart.getDay())
-
-  do {
-    weeks.push(
-      <Week
-        start={new Date(weekStart)}
-        month={month}
-        key={`week-${weekStart.getDate()}`}
-      />
-    )
-    weekStart.setDate(weekStart.getDate() + 7)
-  } while (weekStart.getMonth() === month)
-
-  return weeks
 }
 
 
