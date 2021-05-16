@@ -1,0 +1,12 @@
+
+
+.calendar__date{
+  border-radius:50%;
+  min-width:30px;
+  min-height:30px;
+  margin:0 0.5em;
+
+  &.calendar__date-marked{
+    background-color:#C2E1ED;
+  }
+}

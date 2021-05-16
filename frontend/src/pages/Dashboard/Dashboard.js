@@ -1,8 +1,11 @@
-
+import Container from '@material-ui/core/Container'
+import Calendar from '../../components/Calendar/Calendar'
 
 const Dashboard = () => {
   return (
-    <h1>Dashboard</h1>
+    <Container maxWidth='lg'>
+      <Calendar month={4} year={2021} />
+    </Container>
   )
 }
 
